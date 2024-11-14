@@ -76,6 +76,10 @@
   padding: 0px 80px;
 }
 
+/*********** Hero section CSS start ***********/
+
+/*********** Navbar CSS start ***********/
+
 .navWrapper {
   padding-top: 36px;
 }
@@ -114,6 +118,10 @@
   padding: 12px 45px;
   width: auto !important;
 }
+
+/*********** Navbar CSS end ***********/
+
+/*********** HeroForm CSS start ***********/
 
 .heroFormWrapper {
   display: flex;
@@ -210,6 +218,12 @@
   outline: none;
 }
 
+/*********** HeroForm CSS end ***********/
+
+/*********** Hero section end ***********/
+
+/*********** Experience section start ***********/
+
 .experienceWrapper {
   display: flex;
   align-items: center;
@@ -266,6 +280,10 @@
   padding: 12px 60px;
 }
 
+/*********** Experience section end ***********/
+
+/*********** Contract section start ***********/
+
 .contractWrapper {
   margin: 120px 0;
 }
@@ -296,6 +314,10 @@
 .contractWrapper .contractRight img {
   width: 100%;
 }
+
+/*********** Contract section end ***********/
+
+/*********** Project section start ***********/
 
 .projectWrapper .projectUpper .projectUpperHeading {
   display: flex;
@@ -349,6 +371,10 @@
   padding: 10px;
 }
 
+/*********** Project section end ***********/
+
+/*********** Client section start ***********/
+
 .clientWrapper {
   margin: 120px 0 160px;
 }
@@ -371,6 +397,10 @@
   line-height: 170px;
 }
 
+/*********** Client section end ***********/
+
+/*********** Technologies section start ***********/
+
 .technologiesWrapper h2 {
   text-align: center;
   margin-bottom: 60px;
@@ -389,6 +419,10 @@
   border-image-source: linear-gradient(90.21deg, #ffffff 0%, #ffffff 100%);
   box-shadow: 0px 14px 34px 0px #00000008;
 }
+
+/*********** Technologies section end ***********/
+
+/*********** Reviews section start ***********/
 
 .reviewsWrapper {
   margin: 120px 0;
@@ -429,6 +463,10 @@
   width: 50px;
   height: 50px;
 }
+
+/*********** Reviews section end ***********/
+
+/*********** Form section start ***********/
 
 .formWrapper {
   margin-bottom: 70px;
@@ -488,3 +526,5 @@
 .formWrapper .heroFormRight form div input {
   width: 90%;
 }
+
+/*********** Form section end ***********/
