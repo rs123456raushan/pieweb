@@ -18,7 +18,7 @@ const NavBar = () => {
         <div className="navBarBig">
           <div></div>
           <div className="navBarLink">
-            <span>Home</span>
+            <span className="active">Home</span>
             <span>About Us</span>
             <span>Our Services</span>
             <span>Contact Us</span>
@@ -41,7 +41,7 @@ const NavBar = () => {
       <div className="navBarMobile">
         <div className={`sidebar ${isOpen === true ? "active" : ""}`}>
           <div className="navBarLink">
-            <span>Home</span>
+            <span className="active">Home</span>
             <span>About Us</span>
             <span>Our Services</span>
             <span>Contact Us</span>
