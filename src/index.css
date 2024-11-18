@@ -27,6 +27,7 @@
   font-weight: 600;
   line-height: 22px;
   color: var(--white-color);
+  cursor: pointer;
 }
 
 .heading {
@@ -68,6 +69,7 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
+  white-space: nowrap;
 }
 
 .wrapper {
@@ -89,21 +91,29 @@
   top: 0;
 }
 
-.navBarLink {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navBarLogo img {
+  width: 150px;
+  height: 150px;
+}
+
+.navBar {
   padding: 15px 16px;
   border: 1px solid var(--white-color);
   border-radius: 20px;
   box-shadow: 0px 14px 34px 0px #00000008;
 }
 
-.navBarLink div {
+.navBar .navBarBig {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .navBarBig > div {
   width: 33.33%;
 }
 
-.navBarLink .navBarLinks {
+.navBarLink {
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -111,12 +121,78 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  width: 100%;
+  width: 100% !important;
+}
+
+.navBarLink span {
+  cursor: pointer;
 }
 
 .navBarQuote {
   padding: 12px 45px;
   width: auto !important;
+}
+
+.navBar .navBarMobileIcon {
+  display: none;
+}
+
+.navBarMobile .sidebar {
+  width: 300px;
+  min-height: 100vh;
+  box-shadow: 0px 14px 34px 0px #00000008;
+  background-color: var(--white-color);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 15;
+  transition: 0.5s ease-in-out;
+  padding: 20px;
+}
+
+.navBarMobile .sidebar.active {
+  left: 0;
+}
+
+.navBarMobile .sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.navBarMobile .sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navBarMobile .sidebar .navBarLink {
+  padding-top: 50px;
+  position: relative;
+  flex-direction: column;
+  gap: 35px;
+  font-weight: 600;
+}
+
+.navBarMobile .sidebar .navBarLink > img {
+  cursor: pointer;
+}
+
+.navBarMobile .sidebar .navBarLink img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navBarMobile .navBarQuote {
+  margin-top: 40px;
+  width: fit-content !important;
 }
 
 /*********** Navbar CSS end ***********/
@@ -136,13 +212,13 @@
 
 .heroFormLeft p {
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .heroFormLeft h3 {
   font-family: var(--plus-jakarta-sans-font);
-  margin: 25px 0;
   border-right: 7px solid var(--primary-color);
-  display: inline-block;
+  display: inline;
 }
 
 .heroFormLeft > span {
@@ -151,6 +227,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
+  margin-top: 20px;
 }
 
 .heroFormLeft .heroFormLeftContact {
@@ -158,6 +235,10 @@
   align-items: center;
   gap: 30px;
   margin-top: 40px;
+}
+
+.heroFormLeft .heroFormLeftContact > img {
+  cursor: pointer;
 }
 
 .heroFormRight {
@@ -198,8 +279,12 @@
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+.heroFormRight form div {
+  display: flex;
+}
+
 .heroFormRight form div input {
-  width: 85%;
+  flex-grow: 1;
 }
 
 .heroFormRight form input::placeholder,
@@ -302,6 +387,9 @@
 .contractWrapper .contractLeft,
 .contractWrapper .contractRight {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .contractWrapper .contractRight {
@@ -313,6 +401,84 @@
 .contractWrapper .contractLeft img,
 .contractWrapper .contractRight img {
   width: 100%;
+}
+
+.contractWrapper .contractImgHover {
+  position: relative;
+}
+
+.contractWrapper .contractRight img:hover ~ .contractDivHover,
+.contractWrapper .contractDivHover:hover {
+  transform: translateX(0%);
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.contractWrapper .contractDivHover {
+  position: absolute;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  flex: 1 0 100%;
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+  padding: 40px 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.contractWrapper .contractLeft .contractDivHover {
+  position: absolute;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  flex: 1 0 100%;
+  transform: translateY(100%);
+  transition: 0.3s ease;
+  padding: 40px 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.contractWrapper .contractLeft img:hover ~ .contractDivHover,
+.contractWrapper .contractDivHover:hover {
+  transform: translateY(0%);
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.contractWrapper .contractRight .contractDivHover {
+  top: 0;
+}
+
+.contractWrapper .contractDivHover h3 {
+  font-family: var(--bell-mt-font);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.contractWrapper .contractDivHover p {
+  font-family: var(--plus-jakarta-sans-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.03em;
+  margin: 28px 0;
+}
+
+.contractWrapper .contractDivHover button {
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--plus-jakarta-sans-font);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 10px 60px;
 }
 
 /*********** Contract section end ***********/
@@ -357,10 +523,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 }
 
-.projectWrapper .projectLower .projectLowerUpper {
-  gap: 30px;
+.projectWrapper .projectLower .projectLowerUpper > img {
+  cursor: pointer;
 }
 
 .projectWrapper .projectLower .projectLowerUpper button {
@@ -412,11 +579,18 @@
   gap: 10px;
 }
 
+.technologiesWrapper .technologies img {
+  width: 86px;
+}
+
 .technologiesWrapper .technologies div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 20px;
-  padding: 72px 80px;
+  padding: 72px 0px;
   border: 1px solid;
-  border-image-source: linear-gradient(90.21deg, #ffffff 0%, #ffffff 100%);
+  border-image-source: linear-gradient(90.21deg, var(--white-color) 0%, var(--white-color) 100%);
   box-shadow: 0px 14px 34px 0px #00000008;
 }
 
@@ -462,6 +636,7 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 /*********** Reviews section end ***********/
@@ -488,16 +663,18 @@
   gap: 40px;
 }
 
+.formWrapper .formLeft .formLeftList div img {
+  width: 50px;
+  height: 50px;
+}
+
 .formWrapper .formLeft h2 {
-  font-family: var(--bell-mt-font);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 52px;
   margin-bottom: 30px;
 }
 
 .formWrapper .formLeft .formLeftList div {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
@@ -505,7 +682,7 @@
   font-family: var(--plus-jakarta-sans-font);
   font-size: 24px;
   font-weight: 600;
-  line-height: 47px;
+  /* line-height: 47px; */
   letter-spacing: 0.03em;
 }
 
@@ -528,3 +705,214 @@
 }
 
 /*********** Form section end ***********/
+
+@media (max-width: 1300px) {
+  .clientWrapper .clientLeft {
+    width: 60%;
+  }
+
+  .clientWrapper .clientRight {
+    width: 40%;
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .callUsAt {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .heading {
+    font-size: 42px;
+  }
+
+  .wrapper {
+    padding: 0px 60px;
+  }
+
+  .navBar .navBarBig .navBarLink {
+    gap: 35px;
+  }
+
+  .heroFormWrapper {
+    flex-direction: column;
+  }
+
+  .heroFormLeft {
+    width: 100%;
+  }
+
+  .heroFormRight {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .experienceWrapper .experienceLeft {
+    width: 35%;
+  }
+
+  .experienceWrapper .experienceRight {
+    width: 65%;
+  }
+
+  .projectWrapper .projectUpper .projectUpperLower {
+    width: 100%;
+  }
+
+  .technologiesWrapper .technologies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .formWrapper .formRight,
+  .formWrapper .formLeft {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .clientWrapper .clientRight {
+    font-size: 32px;
+  }
+
+  .clientWrapper .clientRight h2 {
+    font-size: 130px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projectWrapper .projectUpper .projectUpperHeading .callUsAt {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .callUsAt > div span {
+    font-size: 18px;
+  }
+
+  .wrapper {
+    padding: 0px 50px;
+  }
+
+  .navBar {
+    padding: 15px 25px;
+  }
+
+  .navBar .navBarBig {
+    display: none;
+  }
+
+  .navBar .navBarMobileIcon {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+  .experienceWrapper .experienceLeft {
+    display: none;
+  }
+
+  .experienceWrapper .experienceRight {
+    width: 100%;
+  }
+
+  .contractImageWrapper {
+    flex-direction: column;
+  }
+
+  .contractWrapper .contractLeft,
+  .contractWrapper .contractRight {
+    width: 100%;
+  }
+
+  .projectWrapper .projectMiddle {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technologiesWrapper .technologies div {
+    padding: 60px 70px;
+  }
+
+  .technologiesWrapper .technologies div img {
+    width: 60px;
+  }
+
+  .reviewsWrapper .reviewsLowerUpper {
+    flex-direction: column;
+  }
+
+  .reviewsWrapper .reviewsLowerUpper .reviewsLowerRight {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 38px;
+  }
+
+  .heroFormLeft p {
+    margin-bottom: 15px;
+  }
+
+  .heroFormLeft > span {
+    margin-top: 15px;
+  }
+
+  .projectWrapper .projectMiddle {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .technologiesWrapper .technologies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technologiesWrapper .technologies div {
+    padding: 60px 70px;
+  }
+
+  .reviewsWrapper .reviewsLowerUpper .reviewsLowerRight p {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .wrapper {
+    padding: 0px 30px;
+  }
+
+  .navBarLogo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .experienceWrapper .experienceRight h6 {
+    font-size: 22px;
+  }
+
+  .technologiesWrapper .technologies div img {
+    width: 42px;
+  }
+
+  .formWrapper .formLeft .formLeftList div img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  .wrapper {
+    padding: 0px 20px;
+  }
+}

@@ -16,7 +16,7 @@ const Clients = () => {
           affordable. The website will have latest Tech + admin panel to manage
           your web.
         </p>
-        <h6>Let's Discuss the project on a nice call,</h6>
+        <h6>Let's Discuss the project on a nice call</h6>
         <button className="btn">Book Now</button>
       </div>
       <div className="experienceLeft clientRight">
