@@ -3,7 +3,7 @@ import { tickIcon } from "../assets/icons";
 
 const Form = () => {
   return (
-    <div className="heroFormWrapper formWrapper">
+    <div className="heroWrapper formWrapper">
       <div className="formLeft">
         <h2 className="heading">What can you expect!</h2>
         <div className="formLeftList">
@@ -29,7 +29,7 @@ const Form = () => {
           </div>
         </div>
       </div>
-      <div className="heroFormRight formRight">
+      <div className="heroRight formRight">
         <h5>Get a call back in 30 mins.</h5>
         <p>Share your Requirements or WhatsApp me to get a call back.</p>
         <form>

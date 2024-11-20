@@ -25,6 +25,7 @@ import technologyEightImg from "./technologyEightImg.png";
 import technologyNineImg from "./technologyNineImg.png";
 import technologyTenImg from "./technologyTenImg.png";
 import clientReviewImg from "./clientReviewImage.webp";
+import backgroundImage from "./background-img.webp";
 
 export {
   logoImage,
@@ -54,4 +55,5 @@ export {
   technologyNineImg,
   technologyTenImg,
   clientReviewImg,
+  backgroundImage,
 };
