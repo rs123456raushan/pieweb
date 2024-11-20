@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 import Experience from "../components/Experience";
 import Contract from "../components/Contract";
@@ -9,32 +9,61 @@ import Reviews from "../components/Reviews";
 import Form from "../components/Form";
 
 const Home = () => {
+
+  const [contents, setContents] = useState([]);
+  const [contacts, setContacts] = useState([]);
+
+  useEffect(() => {
+
+    // Fetching Contacts
+    fetch('http://localhost:1337/api/contacts')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Error fetching contacts: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => setContacts(data.data[0]))
+      .catch((error) => console.error('Error fetching contacts:', error));
+
+    // Fetching Contents
+    fetch('http://localhost:1337/api/contents?populate=*')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Error fetching contents: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => setContents(data.data[0]))
+      .catch((error) => console.error('Error fetching contents:', error));
+  }, [])
+
   return (
     <main className="wrapper">
       <div className="homeWrapper">
         <section>
-          <Hero />
+          <Hero contacts={contacts} />
         </section>
         <section>
-          <Experience />
+          <Experience contents={contents} />
         </section>
         <section>
-          <Contract />
+          <Contract contents={contents} />
         </section>
         <section>
-          <Project />
+          <Project contents={contents} contacts={contacts} />
         </section>
         <section>
-          <Clients />
+          <Clients contents={contents} />
         </section>
         <section>
-          <Technologies />
+          <Technologies contents={contents} />
         </section>
         <section>
-          <Reviews />
+          <Reviews contents={contents} contacts={contacts} />
         </section>
         <section>
-          <Form />
+          <Form contents={contents} />
         </section>
       </div>
     </main>

@@ -2,11 +2,11 @@ import React from "react";
 import NavBar from "./NavBar";
 import HeroForm from "./HeroForm";
 
-const Hero = () => {
+const Hero = ({ contacts }) => {
   return (
     <div className="heroWrapper">
       <NavBar />
-      <HeroForm />
+      <HeroForm contacts={contacts} />
     </div>
   );
 };
