@@ -10,6 +10,7 @@
   --primary-color: #f22f3d;
   --white-color: #fff;
   --black-color: #000;
+  --box-shadow-color: #00000008;
   --plus-jakarta-sans-font: "Plus Jakarta Sans";
   --zeyada-font: "zeyada";
   --poppins-font: "Poppins";
@@ -27,6 +28,7 @@
   font-weight: 600;
   line-height: 22px;
   color: var(--white-color);
+  cursor: pointer;
 }
 
 .heading {
@@ -68,11 +70,36 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
+  white-space: nowrap;
 }
 
 .wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0px 80px;
 }
+
+.homeWrapper {
+  position: relative;
+}
+
+/*********** Background section CSS start ***********/
+
+.backgroundWrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../src/assets/images/background-img.webp);
+  background-size: cover;
+  background-position: top;
+}
+
+/*********** Background section CSS end ***********/
+
+/*********** Navbar section CSS start ***********/
 
 .navWrapper {
   padding-top: 36px;
@@ -83,21 +110,29 @@
   top: 0;
 }
 
-.navBarLink {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navBarLogo img {
+  width: 150px;
+  height: 150px;
+}
+
+.navBar {
   padding: 15px 16px;
   border: 1px solid var(--white-color);
   border-radius: 20px;
-  box-shadow: 0px 14px 34px 0px #00000008;
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
 }
 
-.navBarLink div {
+.navBar .navBarBig {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .navBarBig > div {
   width: 33.33%;
 }
 
-.navBarLink .navBarLinks {
+.navBarLink {
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -105,7 +140,16 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  width: 100%;
+  width: 100% !important;
+}
+
+.navBarLink span {
+  cursor: pointer;
+}
+
+.navBarLink span.active {
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
 .navBarQuote {
@@ -113,59 +157,130 @@
   width: auto !important;
 }
 
-.heroFormWrapper {
+.navBar .navBarMobileIcon {
+  display: none;
+}
+
+.navBarMobile .sidebar {
+  width: 300px;
+  min-height: 100vh;
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
+  background-color: var(--white-color);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 15;
+  transition: 0.5s ease-in-out;
+  padding: 20px;
+}
+
+.navBarMobile .sidebar.active {
+  left: 0;
+}
+
+.navBarMobile .sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(from var(--black-color) r g b / 0.4);
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.navBarMobile .sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navBarMobile .sidebar .navBarLink {
+  padding-top: 50px;
+  position: relative;
+  flex-direction: column;
+  gap: 35px;
+  font-weight: 600;
+}
+
+.navBarMobile .sidebar .navBarLink > img {
+  cursor: pointer;
+}
+
+.navBarMobile .sidebar .navBarLink img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navBarMobile .navBarQuote {
+  margin-top: 40px;
+  width: fit-content !important;
+}
+
+/*********** Navbar section CSS end ***********/
+
+/*********** Hero section CSS start ***********/
+
+.heroWrapper {
   display: flex;
   align-items: center;
   gap: 24px;
   margin: 100px 0 120px;
 }
 
-.heroFormLeft {
-  width: 65%;
+.heroLeft {
+  width: 60%;
 }
 
-.heroFormLeft p {
+.heroLeft p {
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
-.heroFormLeft h3 {
+.heroLeft h3 {
   font-family: var(--plus-jakarta-sans-font);
-  margin: 25px 0;
   border-right: 7px solid var(--primary-color);
-  display: inline-block;
+  display: inline;
 }
 
-.heroFormLeft > span {
+.heroLeft > span {
   display: block;
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
+  margin-top: 20px;
 }
 
-.heroFormLeft .heroFormLeftContact {
+.heroLeft .heroLeftContact {
   display: flex;
   align-items: center;
   gap: 30px;
   margin-top: 40px;
 }
 
-.heroFormRight {
-  width: 35%;
+.heroLeft .heroLeftContact > img {
+  cursor: pointer;
+}
+
+.heroRight {
+  width: 40%;
   padding: 24px;
   border: 1px solid var(--white-color);
   border-radius: 20px;
-  box-shadow: 0px 14px 34px 0px #00000008;
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
 }
 
-.heroFormRight h5 {
+.heroRight h5 {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
 }
 
-.heroFormRight p {
+.heroRight p {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
   font-weight: 400;
@@ -173,28 +288,38 @@
   margin: 20px 0;
 }
 
-.heroFormRight form {
+.heroRight form {
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
 
-.heroFormRight form input,
-.heroFormRight form textarea,
-.heroFormRight form div span {
+.heroRight form input,
+.heroRight form textarea,
+.heroRight form div span {
   border: none;
   border-radius: 10px;
   padding: 16px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(from var(--white-color) r g b / 0.4);
 }
 
-.heroFormRight form div input {
-  width: 85%;
+.heroRight form div span {
+  opacity: 1;
+  color: rgba(from var(--black-color) r g b / 0.4);
 }
 
-.heroFormRight form input::placeholder,
-.heroFormRight form textarea::placeholder,
-.heroFormRight form span {
+.heroRight form div {
+  display: flex;
+  gap: 12px;
+}
+
+.heroRight form div input {
+  flex-grow: 1;
+}
+
+.heroRight form input::placeholder,
+.heroRight form textarea::placeholder,
+.heroRight form span {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
   font-weight: 400;
@@ -203,10 +328,14 @@
   opacity: 0.4;
 }
 
-.heroFormRight form input:focus-visible,
-.heroFormRight form textarea:focus-visible {
+.heroRight form input:focus-visible,
+.heroRight form textarea:focus-visible {
   outline: none;
 }
+
+/*********** Hero section end ***********/
+
+/*********** Experience section start ***********/
 
 .experienceWrapper {
   display: flex;
@@ -264,6 +393,10 @@
   padding: 12px 60px;
 }
 
+/*********** Experience section end ***********/
+
+/*********** Contract section start ***********/
+
 .contractWrapper {
   margin: 120px 0;
 }
@@ -282,6 +415,9 @@
 .contractWrapper .contractLeft,
 .contractWrapper .contractRight {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .contractWrapper .contractRight {
@@ -294,6 +430,88 @@
 .contractWrapper .contractRight img {
   width: 100%;
 }
+
+.contractWrapper .contractImgHover {
+  position: relative;
+}
+
+.contractWrapper .contractRight img:hover ~ .contractDivHover,
+.contractWrapper .contractDivHover:hover {
+  transform: translateX(0%);
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.contractWrapper .contractDivHover {
+  position: absolute;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  flex: 1 0 100%;
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+  padding: 40px 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.contractWrapper .contractLeft .contractDivHover {
+  position: absolute;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  flex: 1 0 100%;
+  transform: translateY(100%);
+  transition: 0.3s ease;
+  padding: 40px 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.contractWrapper .contractLeft img:hover ~ .contractDivHover,
+.contractWrapper .contractDivHover:hover {
+  transform: translateY(0%);
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.contractWrapper .contractRight .contractDivHover {
+  top: 0;
+}
+
+.contractWrapper .contractDivHover h3 {
+  font-family: var(--bell-mt-font);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.contractWrapper .contractDivHover p {
+  font-family: var(--plus-jakarta-sans-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.03em;
+  margin: 28px 0;
+}
+
+.contractWrapper .contractDivHover button {
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--plus-jakarta-sans-font);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 10px 60px;
+}
+
+/*********** Contract section end ***********/
+
+/*********** Project section start ***********/
 
 .projectWrapper .projectUpper .projectUpperHeading {
   display: flex;
@@ -333,10 +551,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 }
 
-.projectWrapper .projectLower .projectLowerUpper {
-  gap: 30px;
+.projectWrapper .projectLower .projectLowerUpper > img {
+  cursor: pointer;
 }
 
 .projectWrapper .projectLower .projectLowerUpper button {
@@ -346,6 +565,10 @@
 .projectWrapper .projectLower .projectLowerLower {
   padding: 10px;
 }
+
+/*********** Project section end ***********/
+
+/*********** Client section start ***********/
 
 .clientWrapper {
   margin: 120px 0 160px;
@@ -369,6 +592,10 @@
   line-height: 170px;
 }
 
+/*********** Client section end ***********/
+
+/*********** Technologies section start ***********/
+
 .technologiesWrapper h2 {
   text-align: center;
   margin-bottom: 60px;
@@ -380,13 +607,24 @@
   gap: 10px;
 }
 
-.technologiesWrapper .technologies div {
-  border-radius: 20px;
-  padding: 72px 80px;
-  border: 1px solid;
-  border-image-source: linear-gradient(90.21deg, #ffffff 0%, #ffffff 100%);
-  box-shadow: 0px 14px 34px 0px #00000008;
+.technologiesWrapper .technologies img {
+  width: 86px;
 }
+
+.technologiesWrapper .technologies div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 72px 0px;
+  border: 1px solid var(--white-color);
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
+  backdrop-filter: blur(54px);
+}
+
+/*********** Technologies section end ***********/
+
+/*********** Reviews section start ***********/
 
 .reviewsWrapper {
   margin: 120px 0;
@@ -426,12 +664,18 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
+
+/*********** Reviews section end ***********/
+
+/*********** Form section start ***********/
 
 .formWrapper {
   margin-bottom: 70px;
   border-radius: 20px;
-  box-shadow: 0px 14px 34px 0px #00000008;
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
+  border: 1px solid var(--white-color);
 }
 
 .formWrapper .formLeft {
@@ -448,16 +692,18 @@
   gap: 40px;
 }
 
+.formWrapper .formLeft .formLeftList div img {
+  width: 50px;
+  height: 50px;
+}
+
 .formWrapper .formLeft h2 {
-  font-family: var(--bell-mt-font);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 52px;
   margin-bottom: 30px;
 }
 
 .formWrapper .formLeft .formLeftList div {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
@@ -465,24 +711,231 @@
   font-family: var(--plus-jakarta-sans-font);
   font-size: 24px;
   font-weight: 600;
-  line-height: 47px;
+  /* line-height: 47px; */
   letter-spacing: 0.03em;
 }
 
 .formWrapper .formRight {
   width: 50%;
-}
-
-.formWrapper .heroFormRight {
   box-shadow: none;
+  border: none;
 }
 
-.formWrapper .heroFormRight form input,
-.formWrapper .heroFormRight form textarea,
-.formWrapper .heroFormRight form span {
-  box-shadow: 0px 14px 34px 0px #00000008;
+.formWrapper .heroRight form input,
+.formWrapper .heroRight form textarea,
+.formWrapper .heroRight form span {
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
 }
 
-.formWrapper .heroFormRight form div input {
-  width: 90%;
+/*********** Form section end ***********/
+
+@media (max-width: 1300px) {
+  .clientWrapper .clientLeft {
+    width: 60%;
+  }
+
+  .clientWrapper .clientRight {
+    width: 40%;
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .callUsAt {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .heading {
+    font-size: 42px;
+  }
+
+  .wrapper {
+    padding: 0px 60px;
+  }
+
+  .navBar .navBarBig .navBarLink {
+    gap: 35px;
+  }
+
+  .heroWrapper {
+    flex-direction: column;
+  }
+
+  .heroLeft {
+    width: 100%;
+  }
+
+  .heroRight {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .experienceWrapper .experienceLeft {
+    width: 35%;
+  }
+
+  .experienceWrapper .experienceRight {
+    width: 65%;
+  }
+
+  .projectWrapper .projectUpper .projectUpperLower {
+    width: 100%;
+  }
+
+  .technologiesWrapper .technologies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .formWrapper .formRight,
+  .formWrapper .formLeft {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .clientWrapper .clientRight {
+    font-size: 32px;
+  }
+
+  .clientWrapper .clientRight h2 {
+    font-size: 130px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projectWrapper .projectUpper .projectUpperHeading .callUsAt {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .callUsAt > div span {
+    font-size: 18px;
+  }
+
+  .wrapper {
+    padding: 0px 50px;
+  }
+
+  .navBar {
+    padding: 15px 25px;
+  }
+
+  .navBar .navBarBig {
+    display: none;
+  }
+
+  .navBar .navBarMobileIcon {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+  .experienceWrapper .experienceLeft {
+    display: none;
+  }
+
+  .experienceWrapper .experienceRight {
+    width: 100%;
+  }
+
+  .contractImageWrapper {
+    flex-direction: column;
+  }
+
+  .contractWrapper .contractLeft,
+  .contractWrapper .contractRight {
+    width: 100%;
+  }
+
+  .projectWrapper .projectMiddle {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technologiesWrapper .technologies div {
+    padding: 60px 70px;
+  }
+
+  .technologiesWrapper .technologies div img {
+    width: 60px;
+  }
+
+  .reviewsWrapper .reviewsLowerUpper {
+    flex-direction: column;
+  }
+
+  .reviewsWrapper .reviewsLowerUpper .reviewsLowerRight {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 38px;
+  }
+
+  .heroLeft p {
+    margin-bottom: 15px;
+  }
+
+  .heroLeft > span {
+    margin-top: 15px;
+  }
+
+  .projectWrapper .projectMiddle {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .technologiesWrapper .technologies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technologiesWrapper .technologies div {
+    padding: 60px 70px;
+  }
+
+  .reviewsWrapper .reviewsLowerUpper .reviewsLowerRight p {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .wrapper {
+    padding: 0px 30px;
+  }
+
+  .navBarLogo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .experienceWrapper .experienceRight h6 {
+    font-size: 22px;
+  }
+
+  .technologiesWrapper .technologies div img {
+    width: 42px;
+  }
+
+  .formWrapper .formLeft .formLeftList div img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  .wrapper {
+    padding: 0px 20px;
+  }
 }

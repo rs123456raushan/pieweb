@@ -1,19 +1,19 @@
 import logoImage from "./logoImage.png";
-import contractImageOne from "./contractImageOne.png";
-import contractImageTwo from "./contractImageTwo.png";
-import contractImageThree from "./contractImageThree.png";
-import projectOneImg from "./projectOneImg.png";
-import projectTwoImg from "./projectTwoImg.png";
-import projectThreeImg from "./projectThreeImg.png";
-import projectFourImg from "./projectFourImg.png";
-import projectFiveImg from "./projectFiveImg.png";
-import projectSixImg from "./projectSixImg.png";
-import projectSevenImg from "./projectSevenImg.png";
-import projectEightImg from "./projectEightImg.png";
-import projectNineImg from "./projectNineImg.png";
-import projectTenImg from "./projectTenImg.png";
-import projectElevenImg from "./projectElevenImg.png";
-import projectTwelveImg from "./projectTwelveImg.png";
+import contractImageOne from "./contractImageOne.webp";
+import contractImageTwo from "./contractImageTwo.webp";
+import contractImageThree from "./contractImageThree.webp";
+import projectOneImg from "./projectOneImg.webp";
+import projectTwoImg from "./projectTwoImg.webp";
+import projectThreeImg from "./projectThreeImg.webp";
+import projectFourImg from "./projectFourImg.webp";
+import projectFiveImg from "./projectFiveImg.webp";
+import projectSixImg from "./projectSixImg.webp";
+import projectSevenImg from "./projectSevenImg.webp";
+import projectEightImg from "./projectEightImg.webp";
+import projectNineImg from "./projectNineImg.webp";
+import projectTenImg from "./projectTenImg.webp";
+import projectElevenImg from "./projectElevenImg.webp";
+import projectTwelveImg from "./projectTwelveImg.webp";
 import technologyOneImg from "./technologyOneImg.png";
 import technologyTwoImg from "./technologyTwoImg.png";
 import technologyThreeImg from "./technologyThreeImg.png";
@@ -24,7 +24,8 @@ import technologySevenImg from "./technologySevenImg.png";
 import technologyEightImg from "./technologyEightImg.png";
 import technologyNineImg from "./technologyNineImg.png";
 import technologyTenImg from "./technologyTenImg.png";
-import clientReviewImg from "./clientReviewImage.png";
+import clientReviewImg from "./clientReviewImage.webp";
+import backgroundImage from "./background-img.webp";
 
 export {
   logoImage,
@@ -54,4 +55,5 @@ export {
   technologyNineImg,
   technologyTenImg,
   clientReviewImg,
+  backgroundImage,
 };

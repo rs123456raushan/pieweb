@@ -3,33 +3,33 @@ import { tickIcon } from "../assets/icons";
 
 const Form = () => {
   return (
-    <div className="heroFormWrapper formWrapper">
+    <div className="heroWrapper formWrapper">
       <div className="formLeft">
-        <h2>What can you expect!</h2>
+        <h2 className="heading">What can you expect!</h2>
         <div className="formLeftList">
           <div>
-            <img width={50} height={50} src={tickIcon} alt="tickIcon" />
+            <img src={tickIcon} alt="tickIcon" />
             <span>On time delivery</span>
           </div>
           <div>
-            <img width={50} height={50} src={tickIcon} alt="tickIcon" />
+            <img src={tickIcon} alt="tickIcon" />
             <span>Most Affordable Quote</span>
           </div>
           <div>
-            <img width={50} height={50} src={tickIcon} alt="tickIcon" />
+            <img src={tickIcon} alt="tickIcon" />
             <span>1 year of service warranty</span>
           </div>
           <div>
-            <img width={50} height={50} src={tickIcon} alt="tickIcon" />
+            <img src={tickIcon} alt="tickIcon" />
             <span>Compressed and royalty free images</span>
           </div>
           <div>
-            <img width={50} height={50} src={tickIcon} alt="tickIcon" />
+            <img src={tickIcon} alt="tickIcon" />
             <span>Domain, Hosting Included for 1 year</span>
           </div>
         </div>
       </div>
-      <div className="heroFormRight formRight">
+      <div className="heroRight formRight">
         <h5>Get a call back in 30 mins.</h5>
         <p>Share your Requirements or WhatsApp me to get a call back.</p>
         <form>
