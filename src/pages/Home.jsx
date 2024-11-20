@@ -7,6 +7,8 @@ import Clients from "../components/Clients";
 import Technologies from "../components/Technologies";
 import Reviews from "../components/Reviews";
 import Form from "../components/Form";
+import Background from "../components/Background";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
 
@@ -42,7 +44,11 @@ const Home = () => {
     <main className="wrapper">
       <div className="homeWrapper">
         <section>
+          <NavBar />
+        </section>
+        <section>
           <Hero contacts={contacts} />
+          <Background />
         </section>
         <section>
           <Experience contents={contents} />

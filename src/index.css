@@ -10,6 +10,7 @@
   --primary-color: #f22f3d;
   --white-color: #fff;
   --black-color: #000;
+  --box-shadow-color: #00000008;
   --plus-jakarta-sans-font: "Plus Jakarta Sans";
   --zeyada-font: "zeyada";
   --poppins-font: "Poppins";
@@ -78,9 +79,27 @@
   padding: 0px 80px;
 }
 
-/*********** Hero section CSS start ***********/
+.homeWrapper {
+  position: relative;
+}
 
-/*********** Navbar CSS start ***********/
+/*********** Background section CSS start ***********/
+
+.backgroundWrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../src/assets/images/background-img.webp);
+  background-size: cover;
+  background-position: top;
+}
+
+/*********** Background section CSS end ***********/
+
+/*********** Navbar section CSS start ***********/
 
 .navWrapper {
   padding-top: 36px;
@@ -100,7 +119,7 @@
   padding: 15px 16px;
   border: 1px solid var(--white-color);
   border-radius: 20px;
-  box-shadow: 0px 14px 34px 0px #00000008;
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
 }
 
 .navBar .navBarBig {
@@ -145,7 +164,7 @@
 .navBarMobile .sidebar {
   width: 300px;
   min-height: 100vh;
-  box-shadow: 0px 14px 34px 0px #00000008;
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
   background-color: var(--white-color);
   position: fixed;
   top: 0;
@@ -165,7 +184,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(from var(--black-color) r g b / 0.4);
   transition: 0.5s;
   opacity: 0;
   visibility: hidden;
@@ -200,33 +219,33 @@
   width: fit-content !important;
 }
 
-/*********** Navbar CSS end ***********/
+/*********** Navbar section CSS end ***********/
 
-/*********** HeroForm CSS start ***********/
+/*********** Hero section CSS start ***********/
 
-.heroFormWrapper {
+.heroWrapper {
   display: flex;
   align-items: center;
   gap: 24px;
   margin: 100px 0 120px;
 }
 
-.heroFormLeft {
-  width: 65%;
+.heroLeft {
+  width: 60%;
 }
 
-.heroFormLeft p {
+.heroLeft p {
   font-weight: 400;
   margin-bottom: 20px;
 }
 
-.heroFormLeft h3 {
+.heroLeft h3 {
   font-family: var(--plus-jakarta-sans-font);
   border-right: 7px solid var(--primary-color);
   display: inline;
 }
 
-.heroFormLeft > span {
+.heroLeft > span {
   display: block;
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
@@ -235,33 +254,33 @@
   margin-top: 20px;
 }
 
-.heroFormLeft .heroFormLeftContact {
+.heroLeft .heroLeftContact {
   display: flex;
   align-items: center;
   gap: 30px;
   margin-top: 40px;
 }
 
-.heroFormLeft .heroFormLeftContact > img {
+.heroLeft .heroLeftContact > img {
   cursor: pointer;
 }
 
-.heroFormRight {
-  width: 35%;
+.heroRight {
+  width: 40%;
   padding: 24px;
   border: 1px solid var(--white-color);
   border-radius: 20px;
-  box-shadow: 0px 14px 34px 0px #00000008;
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
 }
 
-.heroFormRight h5 {
+.heroRight h5 {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
 }
 
-.heroFormRight p {
+.heroRight p {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
   font-weight: 400;
@@ -269,32 +288,38 @@
   margin: 20px 0;
 }
 
-.heroFormRight form {
+.heroRight form {
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
 
-.heroFormRight form input,
-.heroFormRight form textarea,
-.heroFormRight form div span {
+.heroRight form input,
+.heroRight form textarea,
+.heroRight form div span {
   border: none;
   border-radius: 10px;
   padding: 16px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(from var(--white-color) r g b / 0.4);
 }
 
-.heroFormRight form div {
+.heroRight form div span {
+  opacity: 1;
+  color: rgba(from var(--black-color) r g b / 0.4);
+}
+
+.heroRight form div {
   display: flex;
+  gap: 12px;
 }
 
-.heroFormRight form div input {
+.heroRight form div input {
   flex-grow: 1;
 }
 
-.heroFormRight form input::placeholder,
-.heroFormRight form textarea::placeholder,
-.heroFormRight form span {
+.heroRight form input::placeholder,
+.heroRight form textarea::placeholder,
+.heroRight form span {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
   font-weight: 400;
@@ -303,12 +328,10 @@
   opacity: 0.4;
 }
 
-.heroFormRight form input:focus-visible,
-.heroFormRight form textarea:focus-visible {
+.heroRight form input:focus-visible,
+.heroRight form textarea:focus-visible {
   outline: none;
 }
-
-/*********** HeroForm CSS end ***********/
 
 /*********** Hero section end ***********/
 
@@ -594,9 +617,9 @@
   justify-content: center;
   border-radius: 20px;
   padding: 72px 0px;
-  border: 1px solid;
-  border-image-source: linear-gradient(90.21deg, var(--white-color) 0%, var(--white-color) 100%);
-  box-shadow: 0px 14px 34px 0px #00000008;
+  border: 1px solid var(--white-color);
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
+  backdrop-filter: blur(54px);
 }
 
 /*********** Technologies section end ***********/
@@ -651,7 +674,8 @@
 .formWrapper {
   margin-bottom: 70px;
   border-radius: 20px;
-  box-shadow: 0px 14px 34px 0px #00000008;
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
+  border: 1px solid var(--white-color);
 }
 
 .formWrapper .formLeft {
@@ -693,20 +717,14 @@
 
 .formWrapper .formRight {
   width: 50%;
-}
-
-.formWrapper .heroFormRight {
   box-shadow: none;
+  border: none;
 }
 
-.formWrapper .heroFormRight form input,
-.formWrapper .heroFormRight form textarea,
-.formWrapper .heroFormRight form span {
-  box-shadow: 0px 14px 34px 0px #00000008;
-}
-
-.formWrapper .heroFormRight form div input {
-  width: 90%;
+.formWrapper .heroRight form input,
+.formWrapper .heroRight form textarea,
+.formWrapper .heroRight form span {
+  box-shadow: 0px 14px 34px 0px var(--box-shadow-color);
 }
 
 /*********** Form section end ***********/
@@ -740,15 +758,15 @@
     gap: 35px;
   }
 
-  .heroFormWrapper {
+  .heroWrapper {
     flex-direction: column;
   }
 
-  .heroFormLeft {
+  .heroLeft {
     width: 100%;
   }
 
-  .heroFormRight {
+  .heroRight {
     margin-top: 25px;
     width: 100%;
   }
@@ -859,11 +877,11 @@
     font-size: 38px;
   }
 
-  .heroFormLeft p {
+  .heroLeft p {
     margin-bottom: 15px;
   }
 
-  .heroFormLeft > span {
+  .heroLeft > span {
     margin-top: 15px;
   }
 
