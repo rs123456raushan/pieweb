@@ -14,11 +14,11 @@ const Hero = () => {
           since the 1500s
         </span>
         <div className="heroLeftContact">
-          <img src={whatsappIcon} width={170} height={48} alt="whatsappIcon" />
+          <img src={whatsappIcon} alt="whatsappIcon" />
           <div className="callUsAt">
             <span>or Call us at</span>
             <div>
-              <img width={34} height={34} src={phoneIcon} alt="phoneIcon" />
+              <img src={phoneIcon} alt="phoneIcon" />
               <span>+91 8588558855</span>
             </div>
           </div>

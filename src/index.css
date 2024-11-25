@@ -81,6 +81,11 @@
   white-space: nowrap;
 }
 
+.callUsAt > div img {
+  width: 34px;
+  height: 34px;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -271,6 +276,8 @@
 
 .heroLeft .heroLeftContact > img {
   cursor: pointer;
+  width: 170px;
+  height: 48px;
 }
 
 .heroRight {
@@ -894,21 +901,6 @@
     margin-top: 15px;
   }
 
-  .projectWrapper .projectMiddle {
-    display: flex;
-    overflow-x: auto;
-  }
-
-  .technologiesWrapper .technologies {
-    display: flex;
-    overflow-x: auto;
-    padding-bottom: 20px;
-  }
-
-  .technologiesWrapper .technologies div {
-    padding: 60px 70px;
-  }
-
   .reviewsWrapper .reviewsLowerUpper .reviewsLowerRight p {
     font-size: 22px;
     line-height: 40px;
@@ -930,12 +922,28 @@
     height: 120px;
   }
 
+  .heroWrapper {
+    margin: 80px 0 60px;
+  }
+
+  .contractWrapper {
+    margin: 80px 0;
+  }
+
+  .clientWrapper {
+    margin: 60px 0 80px;
+  }
+
   .experienceWrapper .experienceRight h6 {
     font-size: 22px;
   }
 
   .technologiesWrapper .technologies div img {
     width: 42px;
+  }
+
+  .reviewsWrapper {
+    margin: 60px 0;
   }
 
   .formWrapper .formLeft .formLeftList div img {
@@ -947,5 +955,31 @@
 @media (max-width: 540px) {
   .wrapper {
     padding: 0px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .heroLeft .heroLeftContact > img {
+    width: 120px;
+    height: 36px;
+  }
+
+  .heroLeft .heroLeftContact .callUsAt > div span {
+    font-size: 16px;
+  }
+
+  .callUsAt > div img {
+    width: 28px;
+    height: 27px;
+  }
+
+  .projectWrapper .projectLower .projectLowerUpper .btn {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .formWrapper .formLeft .formLeftList div span {
+    font-size: 18px;
+    font-weight: 600;
   }
 }
