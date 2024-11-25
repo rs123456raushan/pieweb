@@ -2,7 +2,7 @@ import React from "react";
 import { leftArrowIcon, phoneIcon, rightArrowIcon } from "../assets/icons";
 import { clientReviewImg } from "../assets/images";
 
-const Reviews = ({ contents, contacts }) => {
+const Reviews = () => {
   return (
     <div className="projectWrapper reviewsWrapper">
       <div className="projectUpper reviewsUpper">
@@ -12,7 +12,7 @@ const Reviews = ({ contents, contacts }) => {
             <span>Call us at</span>
             <div>
               <img width={34} height={34} src={phoneIcon} alt="phoneIcon" />
-              <span>{contacts.contact}</span>
+              <span>+91 8588558855</span>
             </div>
           </div>
         </div>
@@ -31,9 +31,14 @@ const Reviews = ({ contents, contacts }) => {
             />
           </div>
           <div className="reviewsLowerRight">
-            <h3 className="heading">{contents.reviews?.reviews[0].title}</h3>
-            <p className="para">{contents.reviews?.reviews[0].description}</p>
-            <span>{contents.reviews?.reviews[0].name}</span>
+            <h3 className="heading">App-solutely Impressive!</h3>
+            <p className="para">
+              Our app project felt overwhelming until PIE WebServices stepped
+              in. Their expertise in both design and strategy made everything
+              click, turning our idea into an app we're genuinely proud of. If
+              you're aiming for digital brilliance, PIE is the way to go!
+            </p>
+            <span>Amit Gupta, CEO of FitSync</span>
           </div>
         </div>
         <div className="reviewsLowerLower">

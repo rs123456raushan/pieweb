@@ -1,11 +1,10 @@
 import React from "react";
 
-const Experience = ({ contents }) => {
-
+const Experience = () => {
   return (
     <div className="experienceWrapper">
       <div className="experienceLeft">
-        <h2>{`${contents.experience}+`}</h2>
+        <h2>11+</h2>
         <p>Years of Experience</p>
       </div>
       <div className="experienceRight">
@@ -13,8 +12,12 @@ const Experience = ({ contents }) => {
         <div>
           <span className="heading">more than 11 years.</span>
         </div>
-        <p className="para">{`${contents.work}`}</p>
-        <h6>{`Get the project started instant, Book with Rs ${contents.price} Now.`}</h6>
+        <p className="para">
+          We started designing website in 2009 and since then i have developed
+          more than 900 websites and APPs. Some of my best works are mentioned
+          below.
+        </p>
+        <h6>Get the project started instant, Book with Rs 999 Now.</h6>
         <button className="btn">Book Now</button>
       </div>
     </div>

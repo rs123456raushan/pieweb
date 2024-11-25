@@ -1,26 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { logoImage } from "../assets/images";
 import { closeIcon, menuIcon } from "../assets/icons";
 
 const NavBar = () => {
   const [isOpen, setIsopen] = useState(false);
-  const [navbarOptions, setNavbarOptions] = useState([]);
 
   const ToggleSidebar = () => {
     isOpen === true ? setIsopen(false) : setIsopen(true);
   };
-
-  useEffect(() => {
-    fetch('http://localhost:1337/api/navbars')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Error fetching navbars: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => setNavbarOptions(data.data[0]))
-      .catch((error) => console.error('Error fetching navbars:', error));
-  }, [])
 
   return (
     <div className="navWrapper">
@@ -31,10 +18,10 @@ const NavBar = () => {
         <div className="navBarBig">
           <div></div>
           <div className="navBarLink">
-            <span className="active">{navbarOptions.field1}</span>
-            <span>{navbarOptions.field2}</span>
-            <span>{navbarOptions.field3}</span>
-            <span>{navbarOptions.field4}</span>
+            <span className="active">Home</span>
+            <span>About Us</span>
+            <span>Our Services</span>
+            <span>Contact Us</span>
           </div>
           <div className="navBarQuote btn">
             <span>Quote</span>
