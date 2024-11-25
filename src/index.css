@@ -31,6 +31,14 @@
   cursor: pointer;
 }
 
+.technologies::-webkit-scrollbar {
+  display: none;
+}
+
+.projectMiddle::-webkit-scrollbar {
+  display: none;
+}
+
 .heading {
   font-family: var(--bell-mt-font);
   font-weight: 700;
@@ -92,7 +100,7 @@
   z-index: -10;
   width: 100%;
   height: 100vh;
-  background-image: url('../src/assets/images/background-img.webp');
+  background-image: url("../src/assets/images/background-img.webp");
   background-size: cover;
   background-position: top;
 }
@@ -784,7 +792,9 @@
   }
 
   .technologiesWrapper .technologies {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
   }
 
   .formWrapper .formRight,
@@ -850,9 +860,8 @@
   }
 
   .projectWrapper .projectMiddle {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto;
   }
 
   .technologiesWrapper .technologies div {
@@ -886,13 +895,14 @@
   }
 
   .projectWrapper .projectMiddle {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    overflow-x: auto;
   }
 
   .technologiesWrapper .technologies {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
   }
 
   .technologiesWrapper .technologies div {
