@@ -1,21 +1,7 @@
 import React from "react";
-import {
-  projectEightImg,
-  projectElevenImg,
-  projectFiveImg,
-  projectFourImg,
-  projectNineImg,
-  projectOneImg,
-  projectSevenImg,
-  projectSixImg,
-  projectTenImg,
-  projectThreeImg,
-  projectTwelveImg,
-  projectTwoImg,
-} from "../assets/images";
 import { phoneIcon, whatsappIcon } from "../assets/icons";
 
-const Project = () => {
+const Project = ({ contents, contacts }) => {
   return (
     <div className="projectWrapper">
       <div className="projectUpper">
@@ -25,32 +11,19 @@ const Project = () => {
             <span>Call us at</span>
             <div>
               <img width={34} height={34} src={phoneIcon} alt="phoneIcon" />
-              <span>+91 8588558855</span>
+              <span>{contacts.contact}</span>
             </div>
           </div>
         </div>
         <div className="projectUpperLower para">
-          I am a full time freelancer working for 10 years, i can build you what
-          you want in QUALITY
-          <span>
-            My quotes would be great and the support + Quality would be AWESOME.
-            Write me now for any questions.
-          </span>
+          {contents.project_text?.split('|')[0]}
+          <span>{contents.project_text?.split('|')[1]}</span>
         </div>
       </div>
       <div className="projectMiddle">
-        <img src={projectOneImg} alt="projectOneImg" />
-        <img src={projectTwoImg} alt="projectTwoImg" />
-        <img src={projectThreeImg} alt="projectThreeImg" />
-        <img src={projectFourImg} alt="projectFourImg" />
-        <img src={projectFiveImg} alt="projectFiveImg" />
-        <img src={projectSixImg} alt="projectSixImg" />
-        <img src={projectSevenImg} alt="projectSevenImg" />
-        <img src={projectEightImg} alt="projectEightImg" />
-        <img src={projectNineImg} alt="projectNineImg" />
-        <img src={projectTenImg} alt="projectTenImg" />
-        <img src={projectElevenImg} alt="projectElevenImg" />
-        <img src={projectTwelveImg} alt="projectTwelveImg" />
+        {contents.projects && contents.projects.map((project, index) => {
+          return <img key={index} src={`http://localhost:1337/${project.url}`} alt={project.name} />
+        })}
       </div>
       <div className="projectLower">
         <div className="projectLowerUpper">
@@ -61,7 +34,7 @@ const Project = () => {
           <span>Or Call us at</span>
           <div>
             <img width={34} height={34} src={phoneIcon} alt="phoneIcon" />
-            <span>+91 8588558855</span>
+            <span>{contacts.contact}</span>
           </div>
         </div>
       </div>

@@ -2,24 +2,20 @@ import React from "react";
 import { phoneIcon, whatsappIcon } from "../assets/icons";
 import Forms from "./Forms";
 
-const Hero = () => {
+const Hero = ({ contacts }) => {
   return (
     <div className="heroWrapper">
       <div className="heroLeft">
         <p className="heading">Are you looking for</p>
         <h3 className="heading">Website/APP Development&nbsp;&nbsp;</h3>
-        <span>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
-        </span>
+        <span>{contacts.text}</span>
         <div className="heroLeftContact">
           <img src={whatsappIcon} width={170} height={48} alt="whatsappIcon" />
           <div className="callUsAt">
             <span>or Call us at</span>
             <div>
               <img width={34} height={34} src={phoneIcon} alt="phoneIcon" />
-              <span>+91 8588558855</span>
+              <span>{contacts.contact}</span>
             </div>
           </div>
         </div>
