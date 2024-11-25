@@ -31,6 +31,14 @@
   cursor: pointer;
 }
 
+.technologies::-webkit-scrollbar {
+  display: none;
+}
+
+.projectMiddle::-webkit-scrollbar {
+  display: none;
+}
+
 .heading {
   font-family: var(--bell-mt-font);
   font-weight: 700;
@@ -52,20 +60,20 @@
   gap: 20px;
 }
 
-.callUsAt > div {
+.callUsAt>div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.callUsAt > span {
+.callUsAt>span {
   font-family: var(--zeyada-font);
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.callUsAt > div span {
+.callUsAt>div span {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 18px;
   font-weight: 600;
@@ -128,7 +136,7 @@
   justify-content: space-between;
 }
 
-.navBar .navBarBig > div {
+.navBar .navBarBig>div {
   width: 33.33%;
 }
 
@@ -204,7 +212,7 @@
   font-weight: 600;
 }
 
-.navBarMobile .sidebar .navBarLink > img {
+.navBarMobile .sidebar .navBarLink>img {
   cursor: pointer;
 }
 
@@ -245,7 +253,7 @@
   display: inline;
 }
 
-.heroLeft > span {
+.heroLeft>span {
   display: block;
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
@@ -261,7 +269,7 @@
   margin-top: 40px;
 }
 
-.heroLeft .heroLeftContact > img {
+.heroLeft .heroLeftContact>img {
   cursor: pointer;
 }
 
@@ -435,7 +443,7 @@
   position: relative;
 }
 
-.contractWrapper .contractRight img:hover ~ .contractDivHover,
+.contractWrapper .contractRight img:hover~.contractDivHover,
 .contractWrapper .contractDivHover:hover {
   transform: translateX(0%);
   overflow: scroll;
@@ -470,7 +478,7 @@
   color: var(--white-color);
 }
 
-.contractWrapper .contractLeft img:hover ~ .contractDivHover,
+.contractWrapper .contractLeft img:hover~.contractDivHover,
 .contractWrapper .contractDivHover:hover {
   transform: translateY(0%);
   overflow: scroll;
@@ -554,7 +562,7 @@
   gap: 30px;
 }
 
-.projectWrapper .projectLower .projectLowerUpper > img {
+.projectWrapper .projectLower .projectLowerUpper>img {
   cursor: pointer;
 }
 
@@ -784,7 +792,9 @@
   }
 
   .technologiesWrapper .technologies {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
   }
 
   .formWrapper .formRight,
@@ -810,7 +820,7 @@
 }
 
 @media (max-width: 991px) {
-  .callUsAt > div span {
+  .callUsAt>div span {
     font-size: 18px;
   }
 
@@ -850,9 +860,8 @@
   }
 
   .projectWrapper .projectMiddle {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto;
   }
 
   .technologiesWrapper .technologies div {
@@ -881,18 +890,19 @@
     margin-bottom: 15px;
   }
 
-  .heroLeft > span {
+  .heroLeft>span {
     margin-top: 15px;
   }
 
   .projectWrapper .projectMiddle {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    overflow-x: auto;
   }
 
   .technologiesWrapper .technologies {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
   }
 
   .technologiesWrapper .technologies div {
