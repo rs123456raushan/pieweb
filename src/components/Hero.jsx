@@ -19,12 +19,12 @@ const Hero = () => {
             <span>or Call us at</span>
             <div>
               <img src={phoneIcon} alt="phoneIcon" />
-              <span>+91 8588558855</span>
+              <span>+91 9084340987</span>
             </div>
           </div>
         </div>
       </div>
-      <div className="heroRight">
+      <div id="form" className="heroRight">
         <Forms />
       </div>
     </div>

@@ -1,6 +1,14 @@
 import React from "react";
 
 const Clients = () => {
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <div className="experienceWrapper clientWrapper">
       <div className="experienceRight clientLeft">
@@ -17,7 +25,7 @@ const Clients = () => {
           your web.
         </p>
         <h6>Let's Discuss the project on a nice call</h6>
-        <button className="btn">Book Now</button>
+        <button onClick={() => scrollToSection("form")} className="btn">Book Now</button>
       </div>
       <div className="experienceLeft clientRight">
         <h2>800+</h2>

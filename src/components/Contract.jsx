@@ -8,7 +8,7 @@ import {
 const Contract = () => {
   return (
     <div className="contractWrapper">
-      <h2 className="heading">Contract from government of India.</h2>
+      <h2 className="heading">Government Contracts (We will show some of our invoices)</h2>
       <div className="contractImageWrapper">
         <div className="contractLeft">
           <div className="contractImgHover">

@@ -25,16 +25,14 @@ const Project = () => {
             <span>Call us at</span>
             <div>
               <img width={34} height={34} src={phoneIcon} alt="phoneIcon" />
-              <span>+91 8588558855</span>
+              <span>+91 9084340987</span>
             </div>
           </div>
         </div>
         <div className="projectUpperLower para">
-          I am a full time freelancer working for 10 years, i can build you what
-          you want in QUALITY
+          Below are some of our websites work.
           <span>
-            My quotes would be great and the support + Quality would be AWESOME.
-            Write me now for any questions.
+            We pay focus on each of our clients requirement so that a great delivery can be met.
           </span>
         </div>
       </div>
@@ -61,7 +59,7 @@ const Project = () => {
           <span>Or Call us at</span>
           <div>
             <img width={34} height={34} src={phoneIcon} alt="phoneIcon" />
-            <span>+91 8588558855</span>
+            <span>+91 9084340987</span>
           </div>
         </div>
       </div>
