@@ -1,16 +1,9 @@
 import React from "react";
 
-const Experience = () => {
-
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  }
+const Experience = ({ scrollToSection }) => {
 
   return (
-    <div className="experienceWrapper">
+    <div id="about" className="experienceWrapper">
       <div className="experienceLeft">
         <h2>7+</h2>
         <p>Years of Experience</p>

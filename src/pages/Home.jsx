@@ -11,20 +11,28 @@ import Background from "../components/Background";
 import NavBar from "../components/NavBar";
 
 const Home = () => {
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <main className="wrapper">
-      <div className="homeWrapper">
+      <div id="home" className="homeWrapper">
         <section>
           <Background />
         </section>
         <section>
-          <NavBar />
+          <NavBar scrollToSection={scrollToSection} />
         </section>
         <section>
           <Hero />
         </section>
         <section>
-          <Experience />
+          <Experience scrollToSection={scrollToSection} />
         </section>
         <section>
           <Contract />

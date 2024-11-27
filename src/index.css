@@ -68,8 +68,8 @@
 
 .callUsAt>span {
   font-family: var(--zeyada-font);
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: 600;
   line-height: 24px;
 }
 
@@ -423,7 +423,7 @@
 
 .contractImageWrapper {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 24px;
 }
 

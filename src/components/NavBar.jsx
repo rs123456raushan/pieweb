@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { logoImage } from "../assets/images";
 import { closeIcon, menuIcon } from "../assets/icons";
 
-const NavBar = () => {
+const NavBar = ({ scrollToSection }) => {
   const [isOpen, setIsopen] = useState(false);
 
   const ToggleSidebar = () => {
@@ -18,10 +18,10 @@ const NavBar = () => {
         <div className="navBarBig">
           <div></div>
           <div className="navBarLink">
-            <span className="active">Home</span>
-            <span>About Us</span>
-            <span>Our Services</span>
-            <span>Contact Us</span>
+            <span onClick={() => scrollToSection("home")} className="active">Home</span>
+            <span onClick={() => scrollToSection("about")}>About Us</span>
+            <span onClick={() => scrollToSection("services")}>Our Services</span>
+            <span onClick={() => scrollToSection("form")}>Contact Us</span>
           </div>
           <div className="navBarQuote btn">
             <span>Quote</span>
