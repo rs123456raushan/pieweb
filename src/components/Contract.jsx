@@ -26,7 +26,7 @@ const Contract = () => {
           <div className="contractImgHover">
             <img src={contractImageThree} alt="contractImageThree" />
             <div className="contractDivHover">
-              <h3>Aanchal Dairy ( Uttarakhand Govt)</h3>
+              <h3>Aanchal Dairy (Uttarakhand Govt)</h3>
               {/* <p>
                 We started designing website in 2009 and since then i have
                 developed more than 900 websites and APPs. Some of my best works
