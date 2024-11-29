@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { leftArrowIcon, phoneIcon, rightArrowIcon } from "../assets/icons";
-import { clientReviewImg } from "../assets/images";
+import { clientReviewImg1, clientReviewImg2, clientReviewImg3 } from "../assets/images";
 
 const Reviews = () => {
 
@@ -35,24 +35,23 @@ const Reviews = () => {
         <div className="reviewsLowerUpper">
           <div className="reviewsLowerLeft">
             <img
-              width={302}
+              width={350}
               height={422}
-              src={clientReviewImg}
+              src={(index === 0) ? clientReviewImg1 : (index === 1) ? clientReviewImg2 : (index === 2) ? clientReviewImg3 : null}
               alt="clientReviewImg"
             />
           </div>
           <div className="reviewsLowerRight">
-            <h3 className="heading">App-solutely Impressive!</h3>
             {(index === 0) && <p className="para">
               Nuclay is a competent website service provider with a range of high value-for-money services around e-commerce website development and management. Their team was responsive, professional, and Jaideep leads the team by example. Highly recommended!
             </p>}
             {(index === 0) && <span>Saugata, Founder, Foreva</span>}
             {(index === 1) && <p className="para">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum fugiat amet assumenda perferendis velit sequi unde perspiciatis dolorum asperiores? Facere fuga ex voluptatem architecto accusamus, cumque at suscipit tempore sunt?
+              Jaideep has helped me greatly in getting an e-commerce platform for Agreenco. Jaideep and his team are professional and help me maintain and develop more features. I highly recommend them if you are looking for a long-term tech team.
             </p>}
             {(index === 1) && <span>Govil Khattar, Founder, Agreenco</span>}
             {(index === 2) && <p className="para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis suscipit, ipsum autem quos eligendi rem inventore reiciendis temporibus nihil quas numquam eius quisquam magnam perferendis dolorem voluptas nesciunt ut commodi.
+              Jaideep and his team have been instrumental in the development of Resilient Thoughts, which is an ongoing project. I appreciate the insights Jaideep shares with me and the trust he fosters. I look forward to continuing our work together and wish him all the best.
             </p>}
             {(index === 2) && <span>Gaurav, Founder, Resilient Thoughts</span>}
           </div>

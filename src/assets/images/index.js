@@ -25,6 +25,9 @@ import technologyEightImg from "./technologyEightImg.png";
 import technologyNineImg from "./technologyNineImg.png";
 import technologyTenImg from "./technologyTenImg.png";
 import clientReviewImg from "./clientReviewImage.webp";
+import clientReviewImg1 from "./clientReviewImage1.jpg";
+import clientReviewImg2 from "./clientReviewImage2.jpg";
+import clientReviewImg3 from "./clientReviewImage3.jpg";
 import backgroundImage from "./background-img.webp";
 
 export {
@@ -55,5 +58,8 @@ export {
   technologyNineImg,
   technologyTenImg,
   clientReviewImg,
+  clientReviewImg1,
+  clientReviewImg2,
+  clientReviewImg3,
   backgroundImage,
 };
