@@ -15,7 +15,7 @@ import {
 } from "../assets/images";
 import { phoneIcon, whatsappIcon } from "../assets/icons";
 
-const Project = () => {
+const Project = ({ scrollToSection }) => {
   return (
     <div className="projectWrapper">
       <div className="projectUpper">
@@ -52,7 +52,7 @@ const Project = () => {
       </div>
       <div className="projectLower">
         <div className="projectLowerUpper">
-          <button className="btn">Start Instant Project</button>
+          <button onClick={() => scrollToSection("form")} className="btn">Start Instant Project</button>
           <img src={whatsappIcon} width={170} height={48} alt="whatsappIcon" />
         </div>
         <div className="projectLowerLower callUsAt">

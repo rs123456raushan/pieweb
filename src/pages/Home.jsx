@@ -38,7 +38,7 @@ const Home = () => {
           <Contract />
         </section>
         <section>
-          <Project />
+          <Project scrollToSection={scrollToSection} />
         </section>
         <section>
           <Clients />
