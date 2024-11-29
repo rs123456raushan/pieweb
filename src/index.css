@@ -58,23 +58,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
 }
 
-.callUsAt>div {
+.callUsAt > div {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.callUsAt>span {
+.callUsAt > span {
   font-family: var(--zeyada-font);
   font-size: 48px;
   font-weight: 700;
   line-height: 24px;
 }
 
-.callUsAt>div span {
+.callUsAt > div span {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 48px;
   font-weight: 700;
@@ -82,7 +82,7 @@
   white-space: nowrap;
 }
 
-.callUsAt>div img {
+.callUsAt > div img {
   width: 54px;
   height: 54px;
 }
@@ -142,7 +142,7 @@
   justify-content: space-between;
 }
 
-.navBar .navBarBig>div {
+.navBar .navBarBig > div {
   width: 33.33%;
 }
 
@@ -218,7 +218,7 @@
   font-weight: 600;
 }
 
-.navBarMobile .sidebar .navBarLink>img {
+.navBarMobile .sidebar .navBarLink > img {
   cursor: pointer;
 }
 
@@ -259,7 +259,7 @@
   display: inline;
 }
 
-.heroLeft>span {
+.heroLeft > span {
   display: block;
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
@@ -271,12 +271,17 @@
 .heroLeft .heroLeftContact {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   margin-top: 40px;
 }
 
-.heroLeft .heroLeftContact>img {
+.heroLeft .heroLeftContact .callUsAt {
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.heroLeft .heroLeftContact > img {
   cursor: pointer;
   width: 350px;
   height: 100px;
@@ -424,43 +429,49 @@
   margin-bottom: 60px;
 }
 
+.contractImageWrapperMob {
+  display: none;
+}
+
 .contractImageWrapper {
   display: flex;
   align-items: start;
   gap: 24px;
 }
 
-.contractWrapper .contractLeft,
-.contractWrapper .contractRight {
+.contractImageWrapper .contractLeft,
+.contractImageWrapper .contractRight {
   width: 50%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-.contractWrapper .contractRight {
+.contractImageWrapper .contractRight {
   display: flex;
   gap: 24px;
   flex-direction: column;
 }
 
-.contractWrapper .contractLeft img,
-.contractWrapper .contractRight img {
+.contractImageWrapper .contractLeft img,
+.contractImageWrapper .contractRight img {
   width: 100%;
 }
 
-.contractWrapper .contractImgHover {
+.contractImageWrapper .contractImgHover,
+.contractImageWrapperMob .contractImgHoverMob {
   position: relative;
 }
 
-.contractWrapper .contractRight img:hover~.contractDivHover,
-.contractWrapper .contractDivHover:hover {
+.contractImageWrapper .contractRight img:hover ~ .contractDivHover,
+.contractImageWrapper .contractDivHover:hover {
   transform: translateX(0%);
   overflow: scroll;
   scrollbar-width: none;
 }
 
-.contractWrapper .contractDivHover {
+.contractImageWrapper .contractDivHover,
+.contractImageWrapperMob .contractDivHover {
   position: absolute;
   left: -1px;
   right: 0;
@@ -474,7 +485,8 @@
   color: var(--white-color);
 }
 
-.contractWrapper .contractLeft .contractDivHover {
+.contractImageWrapper .contractLeft .contractDivHover,
+.contractImageWrapperMob .contractDivHover {
   position: absolute;
   left: -1px;
   right: 0;
@@ -488,43 +500,21 @@
   color: var(--white-color);
 }
 
-.contractWrapper .contractLeft img:hover~.contractDivHover,
-.contractWrapper .contractDivHover:hover {
+.contractImageWrapper .contractLeft img:hover ~ .contractDivHover,
+.contractImageWrapper .contractDivHover:hover,
+.contractImageWrapperMob img:hover ~ .contractDivHover,
+.contractImageWrapperMob .contractDivHover:hover {
   transform: translateY(0%);
   overflow: scroll;
   scrollbar-width: none;
 }
 
-.contractWrapper .contractRight .contractDivHover {
-  top: 0;
-}
-
-.contractWrapper .contractDivHover h3 {
+.contractImageWrapper .contractDivHover h3,
+.contractImageWrapperMob .contractDivHover h3 {
   font-family: var(--bell-mt-font);
   font-size: 48px;
   font-weight: 700;
   line-height: 52px;
-}
-
-.contractWrapper .contractDivHover p {
-  font-family: var(--plus-jakarta-sans-font);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 36px;
-  letter-spacing: 0.03em;
-  margin: 28px 0;
-}
-
-.contractWrapper .contractDivHover button {
-  color: var(--primary-color);
-  background-color: var(--white-color);
-  border: none;
-  border-radius: 10px;
-  font-family: var(--plus-jakarta-sans-font);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  padding: 10px 60px;
 }
 
 /*********** Contract section end ***********/
@@ -554,6 +544,7 @@
 }
 
 .projectWrapper .projectMiddle img {
+  cursor: pointer;
   width: 100%;
 }
 
@@ -573,7 +564,7 @@
   margin-bottom: 20px;
 }
 
-.projectWrapper .projectLower .projectLowerUpper>img {
+.projectWrapper .projectLower .projectLowerUpper > img {
   cursor: pointer;
 }
 
@@ -833,7 +824,7 @@
 }
 
 @media (max-width: 991px) {
-  .callUsAt>div span {
+  .callUsAt > div span {
     font-size: 35px;
   }
 
@@ -855,6 +846,10 @@
     cursor: pointer;
   }
 
+  .heroLeft .heroLeftContact .callUsAt {
+    gap: 30px;
+  }
+
   .experienceWrapper .experienceLeft {
     display: none;
   }
@@ -867,8 +862,8 @@
     flex-direction: column;
   }
 
-  .contractWrapper .contractLeft,
-  .contractWrapper .contractRight {
+  .contractImageWrapper .contractLeft,
+  .contractImageWrapper .contractRight {
     width: 100%;
   }
 
@@ -907,7 +902,7 @@
     margin-bottom: 15px;
   }
 
-  .heroLeft>span {
+  .heroLeft > span {
     margin-top: 15px;
   }
 
@@ -942,6 +937,34 @@
 
   .contractWrapper {
     margin: 80px 0;
+  }
+
+  .contractImageWrapper {
+    display: none;
+  }
+
+  .contractImageWrapperMob {
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    gap: 10px;
+  }
+
+  .contractImageWrapperMob .contractImgHoverMob img {
+    width: 370px;
+    height: 450px;
+  }
+
+  .contractImageWrapperMob .contractDivHover {
+    left: 0px;
+    bottom: -2px;
+    transform: translateY(100%);
+  }
+
+  .contractImageWrapperMob .contractDivHover h3 {
+    font-size: 32px;
+    line-height: 38px;
   }
 
   .clientWrapper {
@@ -992,17 +1015,12 @@
 }
 
 @media (max-width: 420px) {
-  .heroLeft .heroLeftContact>img {
+  .heroLeft .heroLeftContact > img {
     width: 250px;
     height: 75px;
   }
 
-  .heroLeft .heroLeftContact .callUsAt>div span {
-    font-size: 40px;
-    font-weight: 700;
-  }
-
-  .callUsAt>div img {
+  .callUsAt > div img {
     width: 28px;
     height: 27px;
   }

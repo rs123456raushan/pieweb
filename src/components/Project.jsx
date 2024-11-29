@@ -32,51 +32,88 @@ const Project = ({ scrollToSection }) => {
         <div className="projectUpperLower para">
           Below are some of our websites work.
           <span>
-            We pay focus on each of our clients requirement so that a great delivery can be met.
+            We pay focus on each of our clients requirement so that a great
+            delivery can be met.
           </span>
         </div>
       </div>
       <div className="projectMiddle">
-        <a href="https://parallelcap.in/" target="_blank" rel="noreferrer">
-          <img src={projectOneImg} alt="projectOneImg" />
-        </a>
-        <a href="https://www.svcl.in/" target="_blank" rel="noreferrer">
-          <img src={projectTwoImg} alt="projectTwoImg" />
-        </a>
-        <a href="https://jaiviksattva.in/" target="_blank" rel="noreferrer">
-          <img src={projectThreeImg} alt="projectThreeImg" />
-        </a>
-        <a href="https://www.supertekwindows.com.au/" target="_blank" rel="noreferrer">
-          <img src={projectFourImg} alt="projectFourImg" />
-        </a>
-        <a href="https://sugassence.com/" target="_blank" rel="noreferrer">
-          <img src={projectFiveImg} alt="projectFiveImg" />
-        </a>
-        <a href="https://dhauladharpickles.com/" target="_blank" rel="noreferrer">
-          <img src={projectSixImg} alt="projectSixImg" />
-        </a>
-        <a href="https://fitness-a-message-away.com/" target="_blank" rel="noreferrer">
-          <img src={projectSevenImg} alt="projectSevenImg" />
-        </a>
-        <a href="https://aiqahealth.com/" target="_blank" rel="noreferrer">
-          <img src={projectEightImg} alt="projectEightImg" />
-        </a>
-        <a href="https://hungritos.com/" target="_blank" rel="noreferrer">
-          <img src={projectNineImg} alt="projectNineImg" />
-        </a>
-        <a href="https://verdantimpact.com/" target="_blank" rel="noreferrer">
-          <img src={projectTenImg} alt="projectTenImg" />
-        </a>
-        <a href="https://santushtichakkiatta.com/" target="_blank" rel="noreferrer">
-          <img src={projectElevenImg} alt="projectElevenImg" />
-        </a>
-        <a href="https://resilientthoughts.com/" target="_blank" rel="noreferrer">
-          <img src={projectTwelveImg} alt="projectTwelveImg" />
-        </a>
+        <img
+          src={projectOneImg}
+          onClick={() => window.open("https://parallelcap.in/", "_blank")}
+          alt="projectOneImg"
+        />
+        <img
+          src={projectTwoImg}
+          onClick={() => window.open("https://www.svcl.in/", "_blank")}
+          alt="projectTwoImg"
+        />
+        <img
+          src={projectThreeImg}
+          onClick={() => window.open("https://jaiviksattva.in/", "_blank")}
+          alt="projectThreeImg"
+        />
+        <img
+          src={projectFourImg}
+          onClick={() =>
+            window.open("https://www.supertekwindows.com.au/", "_blank")
+          }
+          alt="projectFourImg"
+        />
+        <img
+          src={projectFiveImg}
+          onClick={() => window.open("https://sugassence.com/", "_blank")}
+          alt="projectFiveImg"
+        />
+        <img
+          src={projectSixImg}
+          onClick={() =>
+            window.open("https://dhauladharpickles.com/", "_blank")
+          }
+          alt="projectSixImg"
+        />
+        <img
+          src={projectSevenImg}
+          onClick={() =>
+            window.open("https://fitness-a-message-away.com/", "_blank")
+          }
+          alt="projectSevenImg"
+        />
+        <img
+          src={projectEightImg}
+          onClick={() => window.open("https://aiqahealth.com/", "_blank")}
+          alt="projectEightImg"
+        />
+        <img
+          src={projectNineImg}
+          onClick={() => window.open("https://hungritos.com/", "_blank")}
+          alt="projectNineImg"
+        />
+        <img
+          src={projectTenImg}
+          onClick={() => window.open("https://verdantimpact.com/", "_blank")}
+          alt="projectTenImg"
+        />
+        <img
+          src={projectElevenImg}
+          onClick={() =>
+            window.open("https://santushtichakkiatta.com/", "_blank")
+          }
+          alt="projectElevenImg"
+        />
+        <img
+          src={projectTwelveImg}
+          onClick={() =>
+            window.open("https://resilientthoughts.com/", "_blank")
+          }
+          alt="projectTwelveImg"
+        />
       </div>
       <div className="projectLower">
         <div className="projectLowerUpper">
-          <button onClick={() => scrollToSection("form")} className="btn">Start Instant Project</button>
+          <button onClick={() => scrollToSection("form")} className="btn">
+            Start Instant Project
+          </button>
           <img src={whatsappIcon} width={170} height={48} alt="whatsappIcon" />
         </div>
         <div className="projectLowerLower callUsAt">
