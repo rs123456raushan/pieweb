@@ -35,8 +35,6 @@ const Reviews = () => {
         <div className="reviewsLowerUpper">
           <div className="reviewsLowerLeft">
             <img
-              width={350}
-              height={422}
               src={(index === 0) ? clientReviewImg1 : (index === 1) ? clientReviewImg2 : (index === 2) ? clientReviewImg3 : null}
               alt="clientReviewImg"
             />

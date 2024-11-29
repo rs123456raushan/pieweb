@@ -37,18 +37,42 @@ const Project = ({ scrollToSection }) => {
         </div>
       </div>
       <div className="projectMiddle">
-        <img src={projectOneImg} alt="projectOneImg" />
-        <img src={projectTwoImg} alt="projectTwoImg" />
-        <img src={projectThreeImg} alt="projectThreeImg" />
-        <img src={projectFourImg} alt="projectFourImg" />
-        <img src={projectFiveImg} alt="projectFiveImg" />
-        <img src={projectSixImg} alt="projectSixImg" />
-        <img src={projectSevenImg} alt="projectSevenImg" />
-        <img src={projectEightImg} alt="projectEightImg" />
-        <img src={projectNineImg} alt="projectNineImg" />
-        <img src={projectTenImg} alt="projectTenImg" />
-        <img src={projectElevenImg} alt="projectElevenImg" />
-        <img src={projectTwelveImg} alt="projectTwelveImg" />
+        <a href="https://parallelcap.in/" target="_blank" rel="noreferrer">
+          <img src={projectOneImg} alt="projectOneImg" />
+        </a>
+        <a href="https://www.svcl.in/" target="_blank" rel="noreferrer">
+          <img src={projectTwoImg} alt="projectTwoImg" />
+        </a>
+        <a href="https://jaiviksattva.in/" target="_blank" rel="noreferrer">
+          <img src={projectThreeImg} alt="projectThreeImg" />
+        </a>
+        <a href="https://www.supertekwindows.com.au/" target="_blank" rel="noreferrer">
+          <img src={projectFourImg} alt="projectFourImg" />
+        </a>
+        <a href="https://sugassence.com/" target="_blank" rel="noreferrer">
+          <img src={projectFiveImg} alt="projectFiveImg" />
+        </a>
+        <a href="https://dhauladharpickles.com/" target="_blank" rel="noreferrer">
+          <img src={projectSixImg} alt="projectSixImg" />
+        </a>
+        <a href="https://fitness-a-message-away.com/" target="_blank" rel="noreferrer">
+          <img src={projectSevenImg} alt="projectSevenImg" />
+        </a>
+        <a href="https://aiqahealth.com/" target="_blank" rel="noreferrer">
+          <img src={projectEightImg} alt="projectEightImg" />
+        </a>
+        <a href="https://hungritos.com/" target="_blank" rel="noreferrer">
+          <img src={projectNineImg} alt="projectNineImg" />
+        </a>
+        <a href="https://verdantimpact.com/" target="_blank" rel="noreferrer">
+          <img src={projectTenImg} alt="projectTenImg" />
+        </a>
+        <a href="https://santushtichakkiatta.com/" target="_blank" rel="noreferrer">
+          <img src={projectElevenImg} alt="projectElevenImg" />
+        </a>
+        <a href="https://resilientthoughts.com/" target="_blank" rel="noreferrer">
+          <img src={projectTwelveImg} alt="projectTwelveImg" />
+        </a>
       </div>
       <div className="projectLower">
         <div className="projectLowerUpper">

@@ -56,34 +56,35 @@
 
 .callUsAt {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 .callUsAt>div {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .callUsAt>span {
   font-family: var(--zeyada-font);
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 700;
   line-height: 24px;
 }
 
 .callUsAt>div span {
   font-family: var(--plus-jakarta-sans-font);
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 700;
   line-height: 22px;
   white-space: nowrap;
 }
 
 .callUsAt>div img {
-  width: 34px;
-  height: 34px;
+  width: 54px;
+  height: 54px;
 }
 
 .wrapper {
@@ -238,7 +239,7 @@
 
 .heroWrapper {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 24px;
   margin: 100px 0 120px;
 }
@@ -269,6 +270,7 @@
 
 .heroLeft .heroLeftContact {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 30px;
   margin-top: 40px;
@@ -276,8 +278,9 @@
 
 .heroLeft .heroLeftContact>img {
   cursor: pointer;
-  width: 170px;
-  height: 48px;
+  width: 350px;
+  height: 100px;
+  margin-bottom: 30px;
 }
 
 .heroRight {
@@ -567,6 +570,7 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 20px;
 }
 
 .projectWrapper .projectLower .projectLowerUpper>img {
@@ -754,10 +758,15 @@
   }
 }
 
+.reviewsLowerLeft img {
+  width: 350px;
+  height: 422px;
+}
+
 @media (max-width: 1200px) {
   .callUsAt {
     flex-direction: column;
-    gap: 0;
+    gap: 30px;
   }
 
   .heading {
@@ -825,7 +834,7 @@
 
 @media (max-width: 991px) {
   .callUsAt>div span {
-    font-size: 18px;
+    font-size: 35px;
   }
 
   .wrapper {
@@ -889,6 +898,11 @@
     font-size: 38px;
   }
 
+  .reviewsLowerLeft img {
+    width: 300px;
+    height: 350px;
+  }
+
   .heroLeft p {
     margin-bottom: 15px;
   }
@@ -943,7 +957,7 @@
     overflow-x: scroll;
   }
 
-  .projectWrapper .projectMiddle img {
+  .projectWrapper .projectMiddle a img {
     width: 80%;
   }
 
@@ -979,12 +993,13 @@
 
 @media (max-width: 420px) {
   .heroLeft .heroLeftContact>img {
-    width: 120px;
-    height: 36px;
+    width: 250px;
+    height: 75px;
   }
 
   .heroLeft .heroLeftContact .callUsAt>div span {
-    font-size: 16px;
+    font-size: 40px;
+    font-weight: 700;
   }
 
   .callUsAt>div img {

@@ -1,5 +1,5 @@
 import React from "react";
-import { phoneIcon, whatsappIcon } from "../assets/icons";
+import { whatsappIcon } from "../assets/icons";
 import Forms from "./Forms";
 
 const Hero = () => {
@@ -11,12 +11,11 @@ const Hero = () => {
         <span>
           We are into website development services and have delivered many successful projects. Our strength lies in our Empathy and Deliverability.
         </span>
-        <div className="heroLeftContact">
+        <div className="heroLeftContact" style={{ alignItems: 'baseline' }}>
           <img src={whatsappIcon} alt="whatsappIcon" />
-          <div className="callUsAt">
+          <div className="callUsAt" style={{ alignItems: 'baseline' }}>
             <span>or Call us at</span>
             <div>
-              <img src={phoneIcon} alt="phoneIcon" />
               <span>+91 9084340987</span>
             </div>
           </div>
