@@ -3,6 +3,14 @@ import { whatsappIcon } from "../assets/icons";
 import Forms from "./Forms";
 
 const Hero = () => {
+
+  const handleWhatsAppRedirect = () => {
+    const phoneNumber = '+919084340987'
+    const message = encodeURIComponent("Hello, I would like to talk to you regarding project requirements !!");
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappURL, "_blank"); // Opens in a new tab
+  };
+
   return (
     <div className="heroWrapper">
       <div className="heroLeft">
@@ -14,7 +22,7 @@ const Hero = () => {
           Deliverability.
         </span>
         <div className="heroLeftContact">
-          <img src={whatsappIcon} alt="whatsappIcon" />
+          <img onClick={handleWhatsAppRedirect} src={whatsappIcon} alt="whatsappIcon" />
           <div className="callUsAt">
             <span>or Call us at</span>
             <div>

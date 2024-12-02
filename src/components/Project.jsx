@@ -16,6 +16,14 @@ import {
 import { phoneIcon, whatsappIcon } from "../assets/icons";
 
 const Project = ({ scrollToSection }) => {
+
+  const handleWhatsAppRedirect = () => {
+    const phoneNumber = '+919084340987'
+    const message = encodeURIComponent("Hello, I would like to talk to you regarding project requirements !!");
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappURL, "_blank"); // Opens in a new tab
+  };
+
   return (
     <div className="projectWrapper">
       <div className="projectUpper">
@@ -114,7 +122,7 @@ const Project = ({ scrollToSection }) => {
           <button onClick={() => scrollToSection("form")} className="btn">
             Start Instant Project
           </button>
-          <img src={whatsappIcon} width={170} height={48} alt="whatsappIcon" />
+          <img onClick={handleWhatsAppRedirect} src={whatsappIcon} width={170} height={48} alt="whatsappIcon" />
         </div>
         <div className="projectLowerLower callUsAt">
           <span>Or Call us at</span>

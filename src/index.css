@@ -61,20 +61,20 @@
   gap: 25px;
 }
 
-.callUsAt > div {
+.callUsAt>div {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.callUsAt > span {
+.callUsAt>span {
   font-family: var(--zeyada-font);
   font-size: 48px;
   font-weight: 700;
   line-height: 24px;
 }
 
-.callUsAt > div span {
+.callUsAt>div span {
   font-family: var(--plus-jakarta-sans-font);
   font-size: 48px;
   font-weight: 700;
@@ -82,7 +82,7 @@
   white-space: nowrap;
 }
 
-.callUsAt > div img {
+.callUsAt>div img {
   width: 54px;
   height: 54px;
 }
@@ -142,7 +142,7 @@
   justify-content: space-between;
 }
 
-.navBar .navBarBig > div {
+.navBar .navBarBig>div {
   width: 33.33%;
 }
 
@@ -218,7 +218,7 @@
   font-weight: 600;
 }
 
-.navBarMobile .sidebar .navBarLink > img {
+.navBarMobile .sidebar .navBarLink>img {
   cursor: pointer;
 }
 
@@ -259,7 +259,7 @@
   display: inline;
 }
 
-.heroLeft > span {
+.heroLeft>span {
   display: block;
   font-family: var(--plus-jakarta-sans-font);
   font-size: 16px;
@@ -281,7 +281,7 @@
   gap: 40px;
 }
 
-.heroLeft .heroLeftContact > img {
+.heroLeft .heroLeftContact>img {
   cursor: pointer;
   width: 350px;
   height: 100px;
@@ -463,7 +463,7 @@
   position: relative;
 }
 
-.contractImageWrapper .contractRight img:hover ~ .contractDivHover,
+.contractImageWrapper .contractRight img:hover~.contractDivHover,
 .contractImageWrapper .contractDivHover:hover {
   transform: translateX(0%);
   overflow: scroll;
@@ -500,9 +500,9 @@
   color: var(--white-color);
 }
 
-.contractImageWrapper .contractLeft img:hover ~ .contractDivHover,
+.contractImageWrapper .contractLeft img:hover~.contractDivHover,
 .contractImageWrapper .contractDivHover:hover,
-.contractImageWrapperMob img:hover ~ .contractDivHover,
+.contractImageWrapperMob img:hover~.contractDivHover,
 .contractImageWrapperMob .contractDivHover:hover {
   transform: translateY(0%);
   overflow: scroll;
@@ -564,7 +564,7 @@
   margin-bottom: 20px;
 }
 
-.projectWrapper .projectLower .projectLowerUpper > img {
+.projectWrapper .projectLower .projectLowerUpper>img {
   cursor: pointer;
 }
 
@@ -824,8 +824,12 @@
 }
 
 @media (max-width: 991px) {
-  .callUsAt > div span {
-    font-size: 35px;
+  .callUsAt>span {
+    font-size: 42px;
+  }
+
+  .callUsAt>div span {
+    font-size: 30px;
   }
 
   .wrapper {
@@ -902,7 +906,7 @@
     margin-bottom: 15px;
   }
 
-  .heroLeft > span {
+  .heroLeft>span {
     margin-top: 15px;
   }
 
@@ -1015,12 +1019,12 @@
 }
 
 @media (max-width: 420px) {
-  .heroLeft .heroLeftContact > img {
+  .heroLeft .heroLeftContact>img {
     width: 250px;
     height: 75px;
   }
 
-  .callUsAt > div img {
+  .callUsAt>div img {
     width: 28px;
     height: 27px;
   }

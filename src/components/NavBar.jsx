@@ -3,10 +3,15 @@ import { logoImage } from "../assets/images";
 import { closeIcon, menuIcon } from "../assets/icons";
 
 const NavBar = ({ scrollToSection }) => {
-  const [isOpen, setIsopen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const ToggleSidebar = () => {
-    isOpen === true ? setIsopen(false) : setIsopen(true);
+  const ToggleSidebar = (section) => {
+    if (isOpen) {
+      setIsOpen(false)
+      scrollToSection(section)
+    } else {
+      setIsOpen(true)
+    }
   };
 
   return (
@@ -23,7 +28,7 @@ const NavBar = ({ scrollToSection }) => {
             <span onClick={() => scrollToSection("services")}>Our Services</span>
             <span onClick={() => scrollToSection("form")}>Contact Us</span>
           </div>
-          <div className="navBarQuote btn">
+          <div onClick={() => scrollToSection("form")} className="navBarQuote btn">
             <span>Quote</span>
           </div>
         </div>
@@ -41,19 +46,19 @@ const NavBar = ({ scrollToSection }) => {
       <div className="navBarMobile">
         <div className={`sidebar ${isOpen === true ? "active" : ""}`}>
           <div className="navBarLink">
-            <span className="active">Home</span>
-            <span>About Us</span>
-            <span>Our Services</span>
-            <span>Contact Us</span>
+            <span onClick={() => ToggleSidebar('home')} className="active">Home</span>
+            <span onClick={() => ToggleSidebar('about')}>About Us</span>
+            <span onClick={() => ToggleSidebar('services')}>Our Services</span>
+            <span onClick={() => ToggleSidebar('form')}>Contact Us</span>
             <img
-              onClick={ToggleSidebar}
+              onClick={() => ToggleSidebar(null)}
               src={closeIcon}
               alt="closeIcon"
               width={24}
               height={24}
             />
           </div>
-          <div className="navBarQuote btn">
+          <div onClick={() => ToggleSidebar('form')} className="navBarQuote btn">
             <span>Quote</span>
           </div>
         </div>
