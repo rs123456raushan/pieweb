@@ -41,7 +41,7 @@ const Reviews = () => {
           </div>
           <div className="reviewsLowerRight">
             {(index === 0) && <p className="para">
-              Nuclay is a competent website service provider with a range of high value-for-money services around e-commerce website development and management. Their team was responsive, professional, and Jaideep leads the team by example. Highly recommended!
+              PieWeb Services is a competent website service provider with a range of high value-for-money services around e-commerce website development and management. Their team was responsive, professional, and Jaideep leads the team by example. Highly recommended!
             </p>}
             {(index === 0) && <span>Saugata, Founder, Foreva</span>}
             {(index === 1) && <p className="para">
